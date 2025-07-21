@@ -1,0 +1,33 @@
+.foot a {
+    display: inline-block;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+#supportHero {
+    background-color: rgb(56, 126, 209);
+    color: white;
+}
+
+#supportHero a{
+    color: white;
+    text-decoration: none;
+}
+
+#supportWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px
+}
+
+#supportHero input {
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.line {
+    line-height: 2;
+}
