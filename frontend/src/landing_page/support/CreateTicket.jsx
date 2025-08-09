@@ -3,7 +3,7 @@ import React from "react";
 function CreateTicket() {
   return (
     <div className="container p-3 mb-5">
-      <div className="row p-5 mt-5">
+      <div className="row p-md-5 mt-md-5">
         <div className="col">
           <h1 className="fs-2 text-muted">
             To create a ticket, select a relevant topic
@@ -11,8 +11,8 @@ function CreateTicket() {
         </div>
       </div>
       <div className="row p-5">
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-solid fa-circle-plus fs-5"></i> Account opening
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -35,8 +35,8 @@ function CreateTicket() {
             Glossary
           </a>
         </div>
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-regular fa-circle-user"></i> Your zerodha account
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -59,8 +59,8 @@ function CreateTicket() {
             Transfer and conversion of securities
           </a>
         </div>
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-solid fa-signal fs-5"></i> Kite
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -87,8 +87,8 @@ function CreateTicket() {
             General
           </a>
         </div>
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-solid fa-indian-rupee-sign"></i> Funds
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -107,8 +107,8 @@ function CreateTicket() {
             eMandates{" "}
           </a>
         </div>
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-solid fa-compact-disc"></i> Console
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -135,8 +135,8 @@ function CreateTicket() {
             Segments
           </a>
         </div>
-        <div className="col-4 text-muted mb-5">
-          <h4 className="mb-5">
+        <div className="col-md-4 text-muted mb-5">
+          <h4 className="mb-md-5">
             <i class="fa-solid fa-coins"></i> Coin
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>

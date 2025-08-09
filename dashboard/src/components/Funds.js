@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 const Funds = () => {
   return (
     <>
-      <div className="funds">
+      <div className="funds" style={{ flexWrap: "wrap" }}>
         <p>Instant, zero-cost fund transfers with UPI </p>
         <Link className="btn btn-green">Add funds</Link>
         <Link className="btn btn-blue">Withdraw</Link>
       </div>
 
-      <div className="row">
+      <div className="row dis-block">
         <div className="col">
           <span>
             <p>Equity</p>

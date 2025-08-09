@@ -2,12 +2,12 @@ import React from "react";
 
 function Awards() {
   return (
-    <div className="container mt-5 mb-5">
+    <div className="container mb-5">
       <div className="row">
         <div className="col-lg-6 col-sm-12 p-5">
           <img src="images/largestBroker.svg" className="img-fluid"></img>
         </div>
-        <div className="col-lg-6 col-sm-12 p-5 mt-5 mb-5">
+        <div className="col-lg-6 col-sm-12 p-md-5 mt-md-5 mb-md-5">
           <h1>Largest stock broker in India</h1>
           <p>
             2+ million Zerodha clients contributes to over 15% of all retail
@@ -40,7 +40,10 @@ function Awards() {
                 </li>
               </ul>
             </div>
-            <img src="images/pressLogos.png" style={{ width: "90%" }} />
+            <img
+              src="images/pressLogos.png"
+              style={{ width: "90%", minWidth: "280px" }}
+            />
           </div>
         </div>
       </div>

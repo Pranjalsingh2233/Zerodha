@@ -1,22 +1,43 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./landing_page/home/HomePage";
 import AboutPage from "./landing_page/about/AboutPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
 import ProductPage from "./landing_page/products/ProductPage";
-import Signup from "./landing_page/Signup/signup";
 import Support from "./landing_page/support/Support";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
+import Signup from "./landing_page/Signup/signup";
+import Login from "./landing_page/login/Login";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const verifyCookie = async () => {
+      const { data } = await axios.post(
+        "http://localhost:8080",
+        {},
+        { withCredentials: true }
+      );
+      if (data.status) {
+        setUsername(data.user);
+      }
+    };
+    verifyCookie();
+  }, [navigate]);
+
   return (
     <>
-      <Navbar />
+      <Navbar user={username} setUser={setUsername} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/pricing" element={<PricingPage />} />

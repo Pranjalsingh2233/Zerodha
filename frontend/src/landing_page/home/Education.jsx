@@ -2,16 +2,16 @@ import React from "react";
 
 function Education() {
   return (
-    <div className="container p-3 mb-5">
+    <div className="container p-3 mb-md-5">
       <div className="row">
-        <div className="col-6">
+        <div className="col-lg-6">
           <img
             src="images/education.svg"
-            className="img-fluid"
-            style={{ width: "70%" }}
+            style={{ width: "70%", minWidth: "280px" }}
           />
         </div>
-        <div className="col-6 p-5 mb-5">
+        <div className="col-lg-6 p-md-5 mb-5">
+          <br class="d-block d-sm-none" />
           <h1 className="fs-2 mb-5">Free and open market education</h1>
           <p>
             Varsity, the largest online stock market education book in the world

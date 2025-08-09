@@ -3,8 +3,8 @@ import React from "react";
 function Brokrage() {
   return (
     <div className="container p-3 mb-5">
-      <div className="row p-5 text-center border-top">
-        <div className="col-8 mb-5">
+      <div className="row p-md-5 text-center border-top">
+        <div className="col-md-8 mb-5">
           <a href="" style={{ textDecoration: "none" }}>
             <h3 className="fs-5 mb-5">Brokerage calculator</h3>
           </a>
@@ -31,7 +31,7 @@ function Brokrage() {
             </li>
           </ul>
         </div>
-        <div className="col-4 mb-5">
+        <div className="col-md-4 mb-5">
           <a href="" style={{ textDecoration: "none" }}>
             <h3 className="fs-5">List of charges</h3>
           </a>

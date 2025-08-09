@@ -7,19 +7,19 @@ function Team() {
         <h1 className="text-center text-muted">People</h1>
       </div>
       <div
-        className="row p-3 text-muted"
+        className="row p-md-3 text-muted"
         style={{ lineHeight: "1.8", fontSize: "1.2em" }}
       >
-        <div className="col p-3 text-center">
+        <div className="col-md-6 p-3 text-center">
           <img
             src="images/Pranjal.jpg"
             className="img-fluid"
-            style={{ width: "50%" }}
+            style={{ width: "50%", minWidth: "250px" }}
           />
           <h4 className="mb-3 mt-3">Pranjal Singh</h4>
           <h6>Full-stack Developer</h6>
         </div>
-        <div className="col p-3">
+        <div className="col-md-6 p-md-3">
           <p>
             As a passionate Full stack developer, I specialize in building
             dynamic, responsive, and scalable web applications using MongoDB,

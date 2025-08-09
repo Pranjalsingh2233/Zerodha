@@ -2,9 +2,9 @@ import React from "react";
 
 function Stats() {
   return (
-    <div className="container p-3 mb-5">
+    <div className="container p-3 mb-md-5">
       <div className="row">
-        <div className="col-lg-6 col-sm-12 p-5">
+        <div className="col-lg-6 col-sm-12 p-md-5">
           <h1 className="mb-5 fs-2">Trust with confidence</h1>
           <h2 className="fs-4">Customer-first always</h2>
           <p className="text-muted">
@@ -29,17 +29,14 @@ function Stats() {
             money.
           </p>
         </div>
-        <div className="col-lg-6 col-sm-12 p-5 mb-5">
-          <img
-            src="images/ecosystem.png"
-            className="img-fluid"
-            style={{ width: "90%" }}
-          />
+        <div className="col-lg-6 col-sm-12 p-md-5 mb-5">
+          <img src="images/ecosystem.png" style={{ width: "90%" }} />
           <div className="text-center">
             <a href="" className="mx-5" style={{ textDecoration: "none" }}>
               Explore our products{" "}
               <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>
+            <br class="d-block d-sm-none" />
             <a href="" style={{ textDecoration: "none" }}>
               Try Kite demo{" "}
               <i className="fa fa-long-arrow-right" aria-hidden="true"></i>

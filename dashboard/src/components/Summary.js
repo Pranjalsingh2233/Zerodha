@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Summary = () => {
+  const [user, setUser] = useState("User");
+
+  useEffect(() => {
+    const verifyUser = async () => {
+      const { data } = await axios.post(
+        "http://localhost:8080",
+        {},
+        { withCredentials: true }
+      );
+      const { status, user } = data;
+      if (status) {
+        setUser(user);
+      } else {
+        setUser("User");
+      }
+    };
+    verifyUser();
+  }, []);
+
   return (
     <>
       <div className="username">
-        <h6>Hi, User!</h6>
+        <h6>Hi, {user}!</h6>
         <hr className="divider" />
       </div>
 

@@ -1,7 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 
-function Navbar() {
+function Navbar({ user, setUser }) {
+  const navigate = useNavigate();
+  const [cookies, removeCookie] = useCookies([]);
+  const Logout = () => {
+    removeCookie("token");
+    setUser("");
+    navigate("/signup");
+  };
   return (
     <nav
       class="navbar navbar-expand-lg border-bottom"
@@ -9,7 +18,7 @@ function Navbar() {
     >
       <div class="container p-2">
         <Link class="navbar-brand" to="/">
-          <img src="images/logo.svg" alt="logo" style={{ width: "25%" }} />
+          <img src="images/logo.svg" alt="logo" style={{ width: "128px" }} />
         </Link>
         <button
           class="navbar-toggler"
@@ -30,9 +39,44 @@ function Navbar() {
           <form class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/signup">
-                  Singup
-                </Link>
+                {user ? (
+                  <div className="dropdown">
+                    <a
+                      class="nav-link dropdown-toggle d-flex align-items-center"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <div className="profile">{user[0]?.toUpperCase()}</div>
+                      <div className="pb-1">{user}</div>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="http://localhost:3000/">
+                          Dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <div class="dropdown-item hover" onClick={Logout}>
+                          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                          &nbsp;&nbsp;Logout
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                ) : (
+                  <Link
+                    class="nav-link active"
+                    aria-current="page"
+                    to="/signup"
+                  >
+                    Singup
+                  </Link>
+                )}
               </li>
               <li class="nav-item">
                 <Link class="nav-link" to="/about">
