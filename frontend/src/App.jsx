@@ -7,7 +7,7 @@ import Support from "./landing_page/support/Support";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-import Signup from "./landing_page/Signup/signup";
+import Signup from "./landing_page/signup/Signup";
 import Login from "./landing_page/login/Login";
 import { useState, useEffect } from "react";
 import axios from "axios";
