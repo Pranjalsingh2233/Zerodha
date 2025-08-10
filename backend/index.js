@@ -24,7 +24,10 @@ async function main() {
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: [
+      "https://zeroddha-frontend.netlify.app",
+      "https://zeroddha-dashboard.netlify.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

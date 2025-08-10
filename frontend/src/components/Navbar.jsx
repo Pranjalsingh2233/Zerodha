@@ -53,7 +53,10 @@ function Navbar({ user, setUser }) {
                     </a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="http://localhost:3000/">
+                        <a
+                          class="dropdown-item"
+                          href="https://zeroddha-dashboard.netlify.app"
+                        >
                           Dashboard
                         </a>
                       </li>

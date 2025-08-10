@@ -43,7 +43,7 @@ const Menu = () => {
   useEffect(() => {
     const verifyUser = async () => {
       const { data } = await axios.post(
-        "http://localhost:8080",
+        "https://zerodha-6yfr.onrender.com",
         {},
         { withCredentials: true }
       );

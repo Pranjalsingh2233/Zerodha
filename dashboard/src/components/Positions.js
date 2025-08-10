@@ -6,7 +6,9 @@ const Positions = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:8080/allPositions");
+      const res = await axios.get(
+        "https://zerodha-6yfr.onrender.com/allPositions"
+      );
       const data = res.data;
       setAllPositions(data);
     };

@@ -7,7 +7,9 @@ const Holdings = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:8080/allHoldings");
+      const res = await axios.get(
+        "https://zerodha-6yfr.onrender.com/allHoldings"
+      );
       const data = res.data;
       setAllHoldings(data);
     };
