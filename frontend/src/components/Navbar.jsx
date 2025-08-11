@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 function Navbar({ user, setUser }) {
   const navigate = useNavigate();
@@ -14,10 +15,14 @@ function Navbar({ user, setUser }) {
     );
     const { status, message } = data;
     if (status) {
-      console.log(message);
+      toast.success(message, {
+        position: "bottom-left",
+      });
     }
     setUser("");
-    navigate("/signup");
+    setTimeout(() => {
+      navigate("/signup");
+    }, 1000);
   };
 
   return (

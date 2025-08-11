@@ -50,7 +50,6 @@ function HomePage() {
       <Pricing />
       <Education />
       <OpenAccount />
-      <ToastContainer />
     </>
   );
 }

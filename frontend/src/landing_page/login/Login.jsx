@@ -87,7 +87,6 @@ const Login = () => {
           Don't have an account? <Link to={"/signup"}>Sign up</Link>
         </span>
       </form>
-      <ToastContainer />
     </div>
   );
 };
