@@ -11,11 +11,16 @@ import Signup from "./landing_page/signup/signup";
 import Login from "./landing_page/login/Login";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function App() {
   const [username, setUsername] = useState("");
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const verifyCookie = async () => {

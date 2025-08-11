@@ -26,7 +26,10 @@ function HomePage() {
       if (status) {
         console.log(user);
       } else {
-        removeCookie("token");
+        removeCookie("token", {
+          secure: true,
+          sameSite: "none",
+        });
         toast.error("You should login first", {
           position: "bottom-left",
         });

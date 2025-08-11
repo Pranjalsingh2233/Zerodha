@@ -7,13 +7,16 @@ function Navbar({ user, setUser }) {
   const navigate = useNavigate();
   const [cookies, removeCookie] = useCookies([]);
   const Logout = () => {
-    removeCookie("token");
+    removeCookie("token", {
+      secure: true,
+      sameSite: "none",
+    });
     setUser("");
     navigate("/signup");
   };
   return (
     <nav
-      class="navbar navbar-expand-lg border-bottom"
+      class="navbar navbar-expand-lg border-bottom sticky-top"
       style={{ backgroundColor: "white" }}
     >
       <div class="container p-2">
