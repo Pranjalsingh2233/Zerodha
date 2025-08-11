@@ -8,6 +8,7 @@ function Navbar({ user, setUser }) {
   const [cookies, removeCookie] = useCookies([]);
   const Logout = () => {
     removeCookie("token", {
+      path: "/",
       secure: true,
       sameSite: "none",
     });

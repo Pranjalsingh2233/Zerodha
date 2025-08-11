@@ -27,6 +27,7 @@ function HomePage() {
         console.log(user);
       } else {
         removeCookie("token", {
+          path: "/",
           secure: true,
           sameSite: "none",
         });
