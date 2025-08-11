@@ -17,6 +17,8 @@ module.exports.Signup = async (req, res, next) => {
     res.cookie("token", token, {
       withCredentials: true,
       httpOnly: false,
+      secure: true, // required for cross-site cookies over HTTPS
+      sameSite: "none", //this one too
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
     res
@@ -47,6 +49,8 @@ module.exports.Login = async (req, res, next) => {
     res.cookie("token", token, {
       withCredentials: true,
       httpOnly: false,
+      secure: true, // required for cross-site cookies over HTTPS
+      sameSite: "none", //this one too
       maxAge: 3 * 24 * 60 * 60 * 1000,
     });
     res
