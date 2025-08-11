@@ -26,11 +26,11 @@ function HomePage() {
       if (status) {
         console.log(user);
       } else {
-        removeCookie("token", {
-          path: "/",
-          secure: true,
-          sameSite: "none",
-        });
+        await axios.post(
+          "https://zerodha-6yfr.onrender.com/logout",
+          {},
+          { withCredentials: true }
+        );
         toast.error("You should login first", {
           position: "bottom-left",
         });

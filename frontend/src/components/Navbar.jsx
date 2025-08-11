@@ -1,20 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
+import axios from "axios";
 
 function Navbar({ user, setUser }) {
   const navigate = useNavigate();
-  const [cookies, removeCookie] = useCookies([]);
-  const Logout = () => {
-    removeCookie("token", {
-      path: "/",
-      secure: true,
-      sameSite: "none",
-    });
+
+  const Logout = async () => {
+    const { data } = await axios.post(
+      "https://zerodha-6yfr.onrender.com/logout",
+      {},
+      { withCredentials: true }
+    );
+    const { status, message } = data;
+    if (status) {
+      console.log(message);
+    }
     setUser("");
     navigate("/signup");
   };
+
   return (
     <nav
       class="navbar navbar-expand-lg border-bottom sticky-top"
