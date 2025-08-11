@@ -13,8 +13,8 @@ function Navbar({ user, setUser }) {
       {},
       { withCredentials: true }
     );
-    const { status, message } = data;
-    if (status) {
+    const { success, message } = data;
+    if (success) {
       toast.success(message, {
         position: "bottom-left",
       });
